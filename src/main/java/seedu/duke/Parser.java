@@ -14,8 +14,9 @@ public class Parser {
      *
      * @param input the raw user input string
      * @return the parsed Command
+     * @throws SpendTrackException if the command has invalid arguments
      */
-    public static Command parse(String input) {
+    public static Command parse(String input) throws SpendTrackException {
         String trimmed = input.trim();
         String[] parts = trimmed.split(" ", 2);
         String commandWord = parts[0].toLowerCase();
@@ -24,6 +25,9 @@ public class Parser {
         case "add":
             return parseAddCommand(parts.length > 1 ? parts[1] : "");
         case "total":
+            if (parts.length > 1) {
+                throw new SpendTrackException("The 'total' command does not take any arguments.");
+            }
             return new TotalCommand();
         case "bye":
             return new ExitCommand();

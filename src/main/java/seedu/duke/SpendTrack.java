@@ -23,10 +23,14 @@ public class SpendTrack {
         ui.showWelcome();
         boolean isRunning = true;
         while (isRunning) {
-            String input = ui.readCommand();
-            Command command = Parser.parse(input);
-            command.execute(expenses, ui);
-            isRunning = !command.isExit();
+            try {
+                String input = ui.readCommand();
+                Command command = Parser.parse(input);
+                command.execute(expenses, ui);
+                isRunning = !command.isExit();
+            } catch (SpendTrackException e) {
+                ui.showError(e.getMessage());
+            }
         }
     }
 

@@ -4,7 +4,11 @@ import org.junit.jupiter.api.Test;
 import seedu.duke.Expense;
 import seedu.duke.ExpenseList;
 
+import seedu.duke.Parser;
+import seedu.duke.SpendTrackException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class TotalCommandTest {
 
@@ -22,5 +26,10 @@ class TotalCommandTest {
     public void getTotal_noExpenses_returnsZero() {
         ExpenseList expenses = new ExpenseList();
         assertEquals(0.0, expenses.getTotal(), 0.01);
+    }
+
+    @Test
+    public void parse_totalWithExtraArgs_throwsException() {
+        assertThrows(SpendTrackException.class, () -> Parser.parse("total 3"));
     }
 }
