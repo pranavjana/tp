@@ -180,6 +180,7 @@ public class ExpenseList {
         logger.info("Budget restored to: " + budget);
     }
 
+    // @@author pranavjana
     /**
      * Replaces the current expenses and budget with the given snapshot data.
      * Used by UndoManager to restore a previous state.
@@ -193,4 +194,5 @@ public class ExpenseList {
         this.budget = restoredBudget;
         logger.info("Expenses restored: " + expenses.size() + " entries, budget=" + budget);
     }
+    // @@author
 }

@@ -40,6 +40,7 @@ public class Parser {
         ALIASES.put("h", "help");
     }
 
+    // @@author pranavjana
     /**
      * Parses the user input and returns the corresponding command.
      * Uses a null UndoManager, so undo command is unavailable.
@@ -51,6 +52,7 @@ public class Parser {
     public static Command parse(String input) throws SpendTrackException {
         return parse(input, null);
     }
+    // @@author
 
     /**
      * Parses the user input and returns the corresponding command.
@@ -102,11 +104,13 @@ public class Parser {
             return parseBudgetCommand(parts.length > 1 ? parts[1] : "");
         case "remaining":
             return new RemainingCommand();
+        // @@author pranavjana
         case "undo":
             if (undoManager == null) {
                 throw new SpendTrackException("Undo is not available.");
             }
             return new UndoCommand(undoManager);
+        // @@author
         case "summary":
             return new SummaryCommand();
         case "help":
