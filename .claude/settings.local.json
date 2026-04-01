@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -L \"https://nus-cs2113-ay2526-s2.github.io/website/admin/tp-expectations.html\")",
+      "Bash(curl -s -L \"https://nus-cs2113-ay2526-s2.github.io/website/admin/tp-constraints.html\")",
+      "Bash(curl -s -L \"https://nus-cs2113-ay2526-s2.github.io/website/se-book-adapted/chapters/codeQuality.html\")",
+      "Bash(curl -s -L \"https://se-education.org/guides/conventions/java/basic.html\")",
+      "Bash(curl -s -L \"https://se-education.org/guides/tutorials/gradle.html\")",
+      "Bash(curl -s -L \"https://nus-cs2113-ay2526-s2.github.io/website/se-book-adapted/chapters/errorHandling.html\")",
+      "Bash(curl -s -L \"https://nus-cs2113-ay2526-s2.github.io/website/se-book-adapted/chapters/qualityAssurance.html\")",
+      "Bash(curl -s -L \"https://nus-cs2113-ay2526-s2.github.io/website/admin/tp-grading.html\")",
+      "Bash(curl -s -L \"https://nus-cs2113-ay2526-s2.github.io/website/schedule/week7/topics.html\")",
+      "Bash(curl -s -L \"https://nus-cs2113-ay2526-s2.github.io/website/schedule/week8/topics.html\")",
+      "Bash(curl -s -L \"https://nus-cs2113-ay2526-s2.github.io/website/schedule/week9/topics.html\")",
+      "Bash(curl -s -L \"https://nus-cs2113-ay2526-s2.github.io/website/schedule/week10/topics.html\")",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)"
+    ]
+  }
+}
